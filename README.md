@@ -7,7 +7,7 @@
 |password|string|null: false, unique: true|
 
 ### Association
-- has_many :group, through::group_users
+- has_many :groups, through::group_users
 - has_many :group_users
 - has_many :messages
 
@@ -24,7 +24,7 @@
 ## messages table
 |Column|Type|Options|
 |------|----|-------|
-|body|text|null: false|
+|body|text||
 |image|string||
 |user_id|integer|null: false, foreign_key: true|
 |group_id|integer|foreign_key: true|
