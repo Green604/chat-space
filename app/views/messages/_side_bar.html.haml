@@ -1,0 +1,30 @@
+.user-name
+  .user-name__top-items
+    %p.user-name__top-items__name
+      kanzawa  
+    %ul.user-name__top-items__icon
+      %li.user-name__top-item__icon-edit
+        = link_to "#" do  
+          = icon('fa', 'edit')
+      %li.user-name__top-item__icon-group
+        = link_to "#" do
+          = icon('fa', 'cog')
+
+.groups
+  .groups__group
+    %p.groups__group__group-name
+      techcamp
+    %p.groups__group__group-message
+      まだメッセージがありません
+
+  .groups__group
+    %p.groups__group__group-name
+      group1
+    %p.groups__group__group-message
+      まだメッセージがありません
+
+  .groups__group
+    %p.groups__group__group-name
+      group2
+    %p.groups__group__group-message
+      まだメッセージがありません

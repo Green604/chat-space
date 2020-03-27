@@ -1,0 +1,38 @@
+.main-header
+  .left-box
+    %h2.left-box__curret-group
+      techcamp
+    %ul.left-box__member-list
+      Member :
+      %li.left-box__member-list__member
+        kanzawa
+  .edit-btn
+  =link_to "#" do
+    Edit
+
+.message-list
+  .message
+    .message__post
+      %p.message__post__member-name
+        kanzawa
+      %p.message__post__date
+        2020/03/23(Mon) 17:00:00
+    %p.message__text
+      hello
+  .message
+    .message__post
+      %p.message__post__member-name
+        member1
+      %p.message__post__date
+        2020/03/23(Mon) 18:00:00
+    %p.message__text
+      good-by
+
+.message-form
+  %form.new_message
+    .input-box
+      %input{type: "text", class: "input-box__text", placeholder: "type a message"}
+      %label{class: "input-box__image"}
+        = icon('far', 'image')
+        %input{type: "file", class: "input-box__image__file"}
+    %input{type: "submit", class: "submit-btn"}
