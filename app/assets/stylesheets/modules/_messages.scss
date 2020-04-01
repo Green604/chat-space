@@ -104,21 +104,21 @@
    padding: 46px 40px;
     .message {
       padding-bottom: 46px;
-      &__post {
+      .message__post {
         display: flex;
         padding-bottom: 12px;
-        &__member-name {
+        .message__post__member-name {
           color: #333333;
           font-size: 16px;
           font-weight: bold;
         }
-        &__date {
+        .message__post__date {
           color: #999999;
           font-size: 12px;
           padding-left: 5px;
         }
       }
-      &__text {
+      .message__text {
         color: #434a54;
         font-size: 14px;
       }

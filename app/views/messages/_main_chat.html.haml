@@ -12,27 +12,14 @@
 
 .message-list
   .message
-    .message__post
-      %p.message__post__member-name
-        kanzawa
-      %p.message__post__date
-        2020/03/23(Mon) 17:00:00
-    %p.message__text
-      hello
-  .message
-    .message__post
-      %p.message__post__member-name
-        member1
-      %p.message__post__date
-        2020/03/23(Mon) 18:00:00
-    %p.message__text
-      good-by
+    = render @messages
 
 .message-form
-  %form.new_message
-    .input-box
-      %input{type: "text", class: "input-box__text", placeholder: "type a message"}
-      %label{class: "input-box__image"}
-        = icon('far', 'image')
-        %input{type: "file", class: "input-box__image__file"}
-    %input{type: "submit", class: "submit-btn"}
+  .form
+    = form_for [@group, @message] do |f|
+      .input-box
+        = f.text_field :content, class: 'input-box__text', placeholder: 'type a message'
+        = f.label :image, class: 'input-box__image' do
+          = icon('fas', 'image', class: 'icon')
+          = f.file_field :image, class: 'input-box__image__file'
+      = f.submit 'Send', class: 'submit-btn'
