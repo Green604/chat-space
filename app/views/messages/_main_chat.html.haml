@@ -1,11 +1,12 @@
 .main-header
   .left-box
     %h2.left-box__curret-group
-      techcamp
+      = @group.name
     %ul.left-box__member-list
       Member :
-      %li.left-box__member-list__member
-        kanzawa
+      - @group.users.each do |user|
+        = user.name
+      
   .edit-btn
   =link_to "#" do
     Edit
