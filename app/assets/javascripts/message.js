@@ -54,8 +54,9 @@ $(function(){
       .done(function(data){
         var html = buildHTML(data);
         $('.messages').append(html);
-        $('.messages').animate({ scrollTop: $('.messages')[0].scrollHeight});
+        $('.messages').animate({scrollTop: $('.messages')[0].scrollHeight});
         $('form')[0].reset();
+        $('.submit-btn').prop('disabled', false);
       })
   })
 });
