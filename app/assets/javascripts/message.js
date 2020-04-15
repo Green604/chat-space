@@ -54,7 +54,7 @@ $(function(){
       .done(function(data){
         var html = buildHTML(data);
         $('.messages').append(html);
-        $('.messages').animate({scrollTop: $('.messages')[0].scrollHeight});
+        $('.message-list').animate({ scrollTop: $('.message-list')[0].scrollHeight });
         $('form')[0].reset();
         $('.submit-btn').prop('disabled', false);
       })
