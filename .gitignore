@@ -3,3 +3,4 @@ log/development.log
 log/test.log
 tmp/cache/*
 .DS_Store/ .DS_Store
+config/secrets.yml
